@@ -1,5 +1,4 @@
-fx_version 'cerulean'
-game 'gta5'
+version "1.0"
 
 client_scripts {
     'utils/sh_utils.lua',
@@ -19,3 +18,6 @@ server_scripts {
 
     'server/main.lua',
 }
+
+fx_version 'cerulean'
+game 'gta5'
