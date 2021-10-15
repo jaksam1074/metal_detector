@@ -4,6 +4,7 @@
 * Can detect illegal items/weapons or both
 * Detect any weapon you decide in _sv_config.lua_
 * Detect any item you decide in _sv_config.lua_
+* Default item name to give `metal_detector` (can be changed in _sv_config.lua_)
 
 ## Installation
 1. Download the script
