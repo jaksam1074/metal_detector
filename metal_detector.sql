@@ -1,0 +1,1 @@
+INSERT INTO items(name, label) VALUES("metal_detector", "Metal Detector");
