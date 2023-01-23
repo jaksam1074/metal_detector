@@ -16,7 +16,10 @@ function getLocalizedText(text, ...)
         if(argumentsCount == #{...}) then
             return string.format(message, ...)
         else
-            print("^1Argument missing for ^3'" .. text .. "'^1 translation, you should retranslate that string^7")
+            print()
+            print("^1Argument missing for translation, retranslate it by copy pasting the ^3['" .. text .. "']^1 translation of the ^5LATEST VERSION of ^6locales/en.lua^1 in the file of your language^7")
+            print("^3[DEBUG] Arguments passed: " .. json.encode({...}))
+            print()
             return text
         end
     else
