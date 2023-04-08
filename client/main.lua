@@ -1,4 +1,5 @@
-ESX = nil
+-- If you are using ESX 1.8.5+ leave the script as it is, if lower, uncomment the lines 2, 21-26 and 191-193
+--ESX = nil
 local metalDetector = 0xFDBADCED
 local isMetalDetectorActive = false
 
@@ -17,12 +18,12 @@ local sounds = {
     }
 }
 
-local function setupESX()
-    while ESX == nil do
-	    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
-end
+--local function setupESX()
+--    while ESX == nil do
+--	    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+--        Citizen.Wait(0)
+--    end
+--end
 
 local function notifyClient(msg)
     ESX.ShowNotification(msg)
@@ -187,6 +188,6 @@ end
 RegisterNetEvent('metal_detector:activateDetector')
 AddEventHandler('metal_detector:activateDetector', activateMetalDetector)
 
-Citizen.CreateThread(function()
-    setupESX()
-end)
+--Citizen.CreateThread(function()
+--    setupESX()
+--end)
