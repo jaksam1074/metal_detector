@@ -19,5 +19,7 @@ server_scripts {
     'server/main.lua',
 }
 
+shared_script '@es_extended/imports.lua'
+
 fx_version 'cerulean'
 game 'gta5'

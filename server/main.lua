@@ -1,11 +1,12 @@
-ESX = nil
+-- If you are using ESX 1.8.5+ leave the script as it is, if lower, uncomment the lines 2, 4-9 and 50
+--ESX = nil
 
-local function setupESX()
-    while ESX == nil do
-	    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
-end
+--local function setupESX()
+--    while ESX == nil do
+--	    TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+--        Citizen.Wait(0)
+--    end
+--end
 
 local function setupESXstuff()
     ESX.RegisterUsableItem(config.metalDetectorItem, function(playerId)
@@ -46,7 +47,6 @@ local function setupESXstuff()
 end
 
 Citizen.CreateThread(function() 
-    setupESX()
-
+--    setupESX()
     setupESXstuff()
 end)
